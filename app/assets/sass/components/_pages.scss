@@ -1,0 +1,13 @@
+.card .card-footer{
+    border-top: 0;
+    background-color: white;
+}
+.col-lg-4 .card{
+    border: 0;
+    box-shadow:  0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    &:hover{
+
+    }
+
+}

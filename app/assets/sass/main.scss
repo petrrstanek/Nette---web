@@ -5,11 +5,15 @@
 //# BASE
 @import './base/base';
 @import './base/typography';
+@import './base/animations';
 
 //# COMPONENTS
-@import './components/showcase';
 @import './components/buttons';
+@import './components/forms';
 @import './components/navbar.scss';
+@import './components/pages';
+@import './components/reference';
+@import './components/showcase';
 
 //# PAGES
 @import './pages/home';

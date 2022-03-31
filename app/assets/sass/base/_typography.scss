@@ -5,8 +5,13 @@ body{
 .heading-primary{
     text-transform: uppercase;
     font-family: 'Open Sans';
-    font-size: 3.3em;
+    font-size: 3em;
     color: white;
+}
+
+h5 .heading-seconary{
+    font-family: 'Open Sans';
+    font-size: 1rem;
 }
 
 .heading-tercinary{
@@ -18,4 +23,8 @@ body{
     text-align: center;
     z-index: 10;
     @include absCenter;
+}
+
+.perex{
+    font-size: 13px;
 }

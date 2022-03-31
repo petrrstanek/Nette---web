@@ -17,48 +17,15 @@
      </div>
 </header>
 
-<section id="pages">
+<section id="pages" class="mt-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-footer">
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-footer"></div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-footer">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-footer">
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-footer">
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-footer">
-
+            <div class="col-lg-4" n:foreach="$pages as $page">
+                <div class="card" >
+                <img src="{$page->img}" alt="">
+                    <div class="card-footer text-center">
+                        <h5 class="heading-secondary">{$page->title}</h5>
+                        <p class="perex">{$page->perex}</p>
                     </div>
                 </div>
             </div>
