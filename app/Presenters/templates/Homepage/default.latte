@@ -3,11 +3,13 @@
      <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide" n:foreach="$slides as $slide">
-                <img src="{$slide->img}">
-                <div class="swiper-heading">
-                    <h1 class="heading-primary">{$slide->title}</h1>
-                    <h3 class="heading-tercinary">{$slide->desc}</h3>
-                    <button class="btn btn-primary mt-5">Tell Me More</button>
+                <div class="overlay-swiper">
+                    <img src="{$slide->img}">
+                    <div class="swiper-heading">
+                        <h1 class="heading-primary">{$slide->title}</h1>
+                        <h3 class="heading-tercinary">{$slide->desc}</h3>
+                        <button class="btn btn-primary mt-5">Tell Me More</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,8 +44,9 @@
 </section>
 
 <section id="references" class="mt-5">
+    <h1 class="text-center my-5">References</h1>
     <div class="container">
-        <div class="swiper ref-swiper">
+        <div class="swiper ref-swiper my-5">
             <div class="swiper-wrapper">
                 <div class="swiper-slide text-center" n:foreach="$references as $reference">
                     <div class="profile mx-auto">
@@ -57,13 +60,25 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination mt-2"></div>
         </div>
     </div>
 </section>
 
 <section id="cta">
-
+    <form n:name=ctaForm class=form>
+        <div class="container d-flex">
+            <div class="inputs">
+            <label n:name=name>Jméno: <input n:name=name></label>
+            <label n:name=email>Email: <input n:name=email></label>
+            <label n:name=phone> Telefon: <input n:name=phone></label>
+            </div>
+            <div class="text-area">
+            <label n:name=message> Zpráva:<input n:name=message></label>
+            </div>
+        </div>
+        <input n:name=send class="btn btn-primary">
+    </form>
 </section>
 
 <footer>

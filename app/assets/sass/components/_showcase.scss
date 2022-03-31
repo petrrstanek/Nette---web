@@ -1,23 +1,17 @@
-.swiper-slide::before{
-    content: '';
-    background: rgba(0,0,0, 0.55);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 9;
-}
+#showcase {
+    .mySwiper > .swiper-wrapper{
+        overflow-y: hidden;
+    }
 
-.swiper{
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    .overlay-swiper::before{
+        content: '';
+        background: rgba(0,0,0, 0.55);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 9;
+    }
 }
 
