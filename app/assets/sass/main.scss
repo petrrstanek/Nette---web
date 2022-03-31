@@ -1,12 +1,18 @@
+//# ABSTRACTS
+@import './abstracts/variables';
+@import './abstracts/mixin';
 
-body{
-    font-family: 'Open Sans', sans-serif;
-}
+//# BASE
+@import './base/base';
+@import './base/typography';
 
-.carousel-inner{
-    max-height: 400px
-}
+//# COMPONENTS
+@import './components/showcase';
+@import './components/buttons';
+@import './components/navbar.scss';
 
+//# PAGES
+@import './pages/home';
 
-@import 'base';
+//# BOOTSRAP
 @import 'node_modules/bootstrap/scss/bootstrap';

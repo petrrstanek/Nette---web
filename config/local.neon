@@ -2,6 +2,6 @@ parameters:
 
 
 database:
-	dsn: 'mysql:host=localhost;dbname=nette-web'
+	dsn: 'mysql:host=localhost;dbname=web-nette'
 	user: root
 	password: root

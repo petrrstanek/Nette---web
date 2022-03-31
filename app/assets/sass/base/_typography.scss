@@ -1,0 +1,21 @@
+body{
+    font-family: 'Open Sans', sans-serif!important;
+}
+
+.heading-primary{
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    font-size: 3.3em;
+    color: white;
+}
+
+.heading-tercinary{
+    font-style: italic;
+    color:white;
+}
+
+.swiper-heading{
+    text-align: center;
+    z-index: 10;
+    @include absCenter;
+}
