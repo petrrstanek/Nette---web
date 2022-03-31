@@ -4,14 +4,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{$basePath}/../sass/css/style.css">
+    {* <link rel="stylesheet" href="{$basePath}/../sass/css/style.css"> *}
 	<title>Nette Web</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
-            <a href="" class="navbar-brand"></a>
+            <a href="" class="navbar-brand">Logo</a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,8 +31,9 @@
 	{include content}
 
 	{block scripts}
-	<script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
-    <script src="{$basePath}/../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	{* <script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script> *}
+    <script src="{$basePath}/../web/dist/web.bundle.js"></script>
+    {* <script src="{$basePath}/../node_modules/bootstrap/dist/js/bootstrap.min.js"></script> *}
 	{/block}
 </body>
 </html>
