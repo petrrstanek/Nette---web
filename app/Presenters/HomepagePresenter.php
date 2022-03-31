@@ -14,6 +14,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 
     private $slides;
     private $pages;
+    private $references;
 
     public function __construct(Nette\Database\Explorer $database)
     {
@@ -24,11 +25,14 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     {
         $this->slides = $this->database->table('slides');
         $this->pages = $this->database->table('pages')->order('id DESC');
+        $this->references = $this->database->table('references');
     }
 
     public function renderDefault(): void
     {
         $this->template->slides = $this->slides;
         $this->template->pages = $this->pages;
+        $this->template->references = $this->references;
+        
     }
 }

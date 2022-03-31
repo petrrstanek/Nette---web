@@ -6,7 +6,7 @@
                 <img src="{$slide->img}">
                 <div class="swiper-heading">
                     <h1 class="heading-primary">{$slide->title}</h1>
-                    <h3 class="heading-tercinary">{$slide->description}</h3>
+                    <h3 class="heading-tercinary">{$slide->desc}</h3>
                     <button class="btn btn-primary mt-5">Tell Me More</button>
                 </div>
             </div>
@@ -21,20 +21,45 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4" n:foreach="$pages as $page">
-                <div class="card" >
-                <img src="{$page->img}" alt="">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{$page->img}" alt="">
+                        <div class="hover-overlay">
+                          <svg class="icon icon-search">
+                            <use xlink:href="../../../assets/sprite.svg#icon-search"></use>                            
+                          </svg>
+                        </div>
+                    </div>
                     <div class="card-footer text-center">
                         <h5 class="heading-secondary">{$page->title}</h5>
                         <p class="perex">{$page->perex}</p>
                     </div>
+                    
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="references">
-
+<section id="references" class="mt-5">
+    <div class="container">
+        <div class="swiper ref-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide text-center" n:foreach="$references as $reference">
+                    <div class="profile mx-auto">
+                        <img src="{$reference->img}" alt="">
+                    </div>
+                    <div class="profile-name">
+                        {$reference->name}
+                    </div>
+                    <div class="eval">
+                        {$reference->eval}
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
 </section>
 
 <section id="cta">

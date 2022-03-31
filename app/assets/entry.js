@@ -21,5 +21,19 @@ const swiper = new Swiper('.mySwiper', {
     keyboard: true,
 });
 
+const refSwiper = new Swiper('.ref-swiper', {
+    modules: [ Navigation, Pagination ],
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper.button-prev"
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+})
+
 window.Nette = netteForms;
 netteForms.initOnLoad();
