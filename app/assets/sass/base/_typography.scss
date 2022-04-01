@@ -1,3 +1,12 @@
+
+html{
+    @include respond(phone){
+        font-size: 50%''
+    }
+    @include respond(tab-port){
+        font-size: 70%;
+    }
+}
 body{
     font-family: 'Open Sans', sans-serif!important;
 }
@@ -17,6 +26,15 @@ h5 .heading-seconary{
 .heading-tercinary{
     font-style: italic;
     color:white;
+}
+
+#cta{
+    .heading-tercinary{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 25px;
+    }
 }
 
 .swiper-heading{

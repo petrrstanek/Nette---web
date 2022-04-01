@@ -8,7 +8,7 @@
                     <div class="swiper-heading">
                         <h1 class="heading-primary">{$slide->title}</h1>
                         <h3 class="heading-tercinary">{$slide->desc}</h3>
-                        <button class="btn btn-primary mt-5">Chci vědět víc</button>
+                        <button class="btn btn-primary mt-5" href="#pages">Chci vědět víc</button>
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
      </div>
 </header>
 
-<section id="pages" class="mt-5">
+<section id="pages" class="mt-5" data-target="#showcase" data-spy="scroll" data-offset="0">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center mb-3" n:foreach="$pages as $page">
@@ -65,20 +65,22 @@
 </section>
 
 <section id="cta">
+<h3 class="heading-tercinary text-center"> Kontaktuje nás</h3>
     <div class="container d-flex justify-content-center align-items-center h-100">
         <form n:name=ctaForm class=form>
-            <div class="container d-flex flex-column justify-content-center">
-                <div class="d-flex justify-content-center h-100 mb-4">
-                    <div class="inputs d-flex flex-column w-100">
+            <div class="container d-flex flex-column justify-content-center mb-4">
+                <div class="row">
+                    <div class="col-lg-6 d-flex flex-column">
                         <input n:name=name>
                         <input n:name=email>
                         <input n:name=phone>
                     </div>
-                <div class="text-area">
-                    <textarea n:name=message class="h-100"></textarea>
+                    <div class="col-lg-6">
+                        <textarea n:name=message class="h-100"></textarea>
+                    </div>
                 </div>
             </div>
-            <input n:name=send class="btn btn-primary mx-auto w-50">
+            <input n:name=send class="btn btn-primary mx-auto cta-button w-25">
         </form>
     </div>
 </section>

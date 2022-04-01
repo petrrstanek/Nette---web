@@ -4,3 +4,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone{
+        @media (max-width: 48em){
+            @content
+        }
+    };
+
+    @if $breakpoint == tab-port{
+        @media(max-width: 62em){
+            @content
+        }
+    };
+
+    @if $breakpoint == tab-land{
+        @media(max-width: 75em){
+            @content
+        }
+    };
+}

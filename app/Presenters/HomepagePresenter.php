@@ -71,7 +71,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
         ->setHtmlAttribute('placeholder', 'Vaše zpráva...')->setHtmlAttribute('cols', 50);
         
         $ctaForm->addSubmit('send',  'Poslat')
-        ->setHtmlAttribute('class', 'btn btn-primary');
+        ->setHtmlAttribute('class', 'btn btn-primary cta-button');
         
         $ctaForm->onSuccess[] = [$this, 'ctaProcess'];
         return $ctaForm;
