@@ -81,6 +81,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     {
         try{
             $this->database->table('call_to_action')->insert($values);
+            $form->setValues([], TRUE);
 
         } catch (AnyModelException $e){
             $form->addError('Error');
