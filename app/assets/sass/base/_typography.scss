@@ -25,6 +25,11 @@ h5 .heading-seconary{
     @include absCenter;
 }
 
+.heading-detail{
+    @include absCenter;
+    text-align: center;
+}
+
 .perex{
     font-size: 13px;
 }

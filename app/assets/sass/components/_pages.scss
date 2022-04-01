@@ -3,32 +3,37 @@
     .container{
         padding: 0 200px;
     }
+    .col-lg-4{
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        .card{
+            border: 0;
+            box-shadow:  0 4px 5px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            
+            &:hover .hover-overlay{
+                transform: translateY(0%);
+                cursor: pointer;
+            }
 
-    .card .card-footer{
-        border-top: 0;
-        background-color: white;
-    }
-    .col-lg-4 .card{
-        border: 0;
-        box-shadow:  0 4px 5px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        &:hover .hover-overlay{
-            transform: translateY(0%);
-            cursor: pointer;
+            .card-footer{
+                border-top: 0;
+                background-color: white;
+            }
         }
-    }
-    
-    .col-lg-4 .card-body{
-        padding: 0;
-        position: relative;
-        overflow: hidden;
-        img{
-            object-fit: cover;
-            max-width: 100%;
+        .card-body{
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+                max-width: 100%;
+            }
         }
-        
-    }
-    
+    } 
+
     .hover-overlay{
         background-color: yellow;
         opacity: 0.5;
@@ -40,5 +45,4 @@
         transform: translateY(100%);
         transition: 0.3s ease-in;
     }
-
 }
