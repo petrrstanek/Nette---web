@@ -1,3 +1,8 @@
+//#ICONS
+
+// @import 'node_modules/font-awesome/scss/icons';
+
+
 //# ABSTRACTS
 @import './abstracts/variables';
 @import './abstracts/mixin';
@@ -22,3 +27,8 @@
 
 //# BOOTSRAP
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+//# ICONS
+// @import 'node_modules/@fortawesome/scss/fontawesome';
+// @import 'node_modules/@fortawesome/fontawesome-free/css/solid';
+// @import 'node_modules/@fortawesome/fontawesome-free/css/brands';
