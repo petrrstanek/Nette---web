@@ -16,10 +16,21 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: 0.3s ease;
     }
     svg{
         fill: white;
         width: 20px;
         height: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        &:hover svg{
+            fill: $color-primary;
+        }
+        &:hover .circle{
+            transform: translateY(-1px);
+        }
     }
 }
