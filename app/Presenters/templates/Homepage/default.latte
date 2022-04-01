@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 d-flex justify-content-center" n:foreach="$pages as $page">
-                <div class="card">
+                <a n:href="Homepage:detail $page->id" class="card">
                     <div class="card-body">
                         <img src="{$page->img}" alt="">
                         <div class="hover-overlay">
@@ -36,8 +36,7 @@
                         <h5 class="heading-secondary">{$page->title}</h5>
                         <p class="perex p-0">{$page->perex}</p>
                     </div>
-                    
-                </div>
+                </a>
             </div>
         </div>
     </div>

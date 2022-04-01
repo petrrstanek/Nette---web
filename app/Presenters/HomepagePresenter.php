@@ -6,6 +6,7 @@ namespace App\Presenters;
 
 use Nette;
 use Nette\Application\UI\Form;
+use Nette\Application\UI\Presenter;
 
 
 final class HomepagePresenter extends Nette\Application\UI\Presenter
@@ -25,16 +26,29 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     public function actionDefault(): void 
     {
         $this->slides = $this->database->table('slides');
-        $this->pages = $this->database->table('pages')->order('id DESC');
+        $this->pages = $this->database->table('pages');
         $this->references = $this->database->table('references');
         $this->navItems = $this->database->table('pages')->where('inNav', 1);
     }
 
     public function renderDefault(): void
     {
+        
         $this->template->slides = $this->slides;
         $this->template->pages = $this->pages;
         $this->template->references = $this->references;
+        $this->template->navItems = $this->navItems;
+    }
+
+    public function actionDetail(int $pageId): void
+    {
+        $this->pages = $this->database->table('pages')->get($pageId);
+        $this->navItems = $this->database->table('pages')->where('inNav', 1);
+    }
+
+    public function renderDetail(): void
+    {
+        $this->template->page = $this->pages;
         $this->template->navItems = $this->navItems;
     }
 
@@ -55,7 +69,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
         ->setRequired();
         
         $ctaForm->addTextArea('message', 'Zpráva')
-        ->setHtmlAttribute('placeholder', 'Vaše zpráva...');
+        ->setHtmlAttribute('placeholder', 'Vaše zpráva...')->setHtmlAttribute('cols', 50);
         
         $ctaForm->addSubmit('send',  'Poslat')
         ->setHtmlAttribute('class', 'btn btn-primary');

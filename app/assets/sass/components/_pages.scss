@@ -12,6 +12,10 @@
         border: 0;
         box-shadow:  0 4px 5px rgba(0, 0, 0, 0.2);
         overflow: hidden;
+        &:hover .hover-overlay{
+            transform: translateY(0%);
+            cursor: pointer;
+        }
     }
     
     .col-lg-4 .card-body{
@@ -22,10 +26,7 @@
             object-fit: cover;
             max-width: 100%;
         }
-        &:hover > .hover-overlay{
-            transform: translateY(0%);
-            cursor: pointer;
-        }
+        
     }
     
     .hover-overlay{
