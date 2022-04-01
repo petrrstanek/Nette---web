@@ -30,15 +30,26 @@
         <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
         {include content}
         <footer>
-            <div class="container d-flex justify-content-around py-3">
+            <div class="container d-flex justify-content-around align-items-center py-3">
                 <div class="copy">
                     Copyright&copy;2022
                 </div>
-                <div class="media">
-                    <div class="circle"><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-
+                <div class="media d-flex">
+                    <div class="circle">
+                        <svg>
+                            <use xlink:href="{$basePath}/../app/assets/img/sprite.svg#icon-facebook">
+                        </svg>
+                    </div>
+                    <div class="circle mx-3">
+                        <svg>
+                            <use xlink:href="{$basePath}/../app/assets/img/sprite.svg#icon-twitter">
+                        </svg>
+                    </div>
+                    <div class="circle">
+                        <svg>
+                            <use xlink:href="{$basePath}/../app/assets/img/sprite.svg#icon-instagram">
+                        </svg>
+                    </div>
                 </div>
                 <div class="terms">
                     <a href="#">Zásady ochrany osobních údajů</a>
