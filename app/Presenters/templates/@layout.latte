@@ -19,7 +19,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto text-end me-3 mt-3">
                         <li class="nav-item" n:foreach="$navItems as $navItem">
                             <a n:href="Homepage:detail $navItem->id" class="nav-link">{$navItem->title}</a>
                         </li>
@@ -30,37 +30,43 @@
         <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
         {include content}
         <footer>
-            <div class="container d-flex justify-content-around align-items-center py-3">
-                <div class="copy">
-                    Copyright&copy;2022
-                </div>
-                <div class="media d-flex">
-                    <div class="circle">
-                        <svg>
-                            <use xlink:href="{$basePath}/../app/assets/img/sprite.svg#icon-facebook">
-                        </svg>
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-sm-4 text-center my-auto">
+                        <div class="copy">
+                          Copyright&copy;2022
+                       </div>
                     </div>
-                    <div class="circle mx-3">
-                        <svg>
-                            <use xlink:href="{$basePath}/../app/assets/img/sprite.svg#icon-twitter">
-                        </svg>
+                    <div class="col-sm-4 d-flex justify-content-center align-items-center">
+                         <div class="media d-flex">
+                            <div class="circle">
+                                <svg>
+                                    <use xlink:href="{$basePath}/../app/assets/img/sprite.svg#icon-facebook">
+                                </svg>
+                            </div>
+                            <div class="circle mx-3">
+                                <svg>
+                                    <use xlink:href="{$basePath}/../app/assets/img/sprite.svg#icon-twitter">
+                                </svg>
+                            </div>
+                            <div class="circle">
+                                <svg>
+                                    <use xlink:href="{$basePath}/../app/assets/img/sprite.svg#icon-instagram">
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="circle">
-                        <svg>
-                            <use xlink:href="{$basePath}/../app/assets/img/sprite.svg#icon-instagram">
-                        </svg>
+                    <div class="col-sm-4 text-center my-auto">
+                        <div class="terms">
+                            <a href="#">Zásady ochrany osobních údajů</a>
+                        </div>
                     </div>
-                </div>
-                <div class="terms">
-                    <a href="#">Zásady ochrany osobních údajů</a>
                 </div>
             </div>
         </footer>
     </main>
-
-
-	{block scripts}
+{block scripts}
     <script src="{$basePath}/../web/dist/web.bundle.js"></script>
-	{/block}
+{/block}
 </body>
 </html>

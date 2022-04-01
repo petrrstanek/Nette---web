@@ -1,6 +1,6 @@
 import './sass/main.scss';
 import netteForms from 'nette-forms';
-// import 'bootstrap';
+import 'bootstrap';
 
 
 
