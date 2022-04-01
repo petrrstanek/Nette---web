@@ -3,3 +3,11 @@
     color: white;
     background-color: transparent;
 }
+
+#cta{
+    .cta-button{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
