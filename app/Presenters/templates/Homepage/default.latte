@@ -66,19 +66,22 @@
 </section>
 
 <section id="cta">
-    <form n:name=ctaForm class=form>
-        <div class="container d-flex">
-            <div class="inputs">
-            <label n:name=name>Jméno: <input n:name=name></label>
-            <label n:name=email>Email: <input n:name=email></label>
-            <label n:name=phone> Telefon: <input n:name=phone></label>
+    <div class="container d-flex justify-content-center align-items-center h-100">
+        <form n:name=ctaForm class=form>
+            <div class="container d-flex flex-column justify-content-center">
+                <div class="d-flex justify-content-center h-100 mb-4">
+                    <div class="inputs d-flex flex-column w-100">
+                        <input n:name=name>
+                        <input n:name=email>
+                        <input n:name=phone>
+                    </div>
+                <div class="text-area">
+                    <textarea n:name=message class="h-100"></textarea>
+                </div>
             </div>
-            <div class="text-area">
-            <label n:name=message> Zpráva:<input n:name=message></label>
-            </div>
-        </div>
-        <input n:name=send class="btn btn-primary">
-    </form>
+            <input n:name=send class="btn btn-primary mx-auto w-50">
+        </form>
+    </div>
 </section>
 
 <footer>

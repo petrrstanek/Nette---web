@@ -38,19 +38,26 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     protected function createComponentCtaForm(): Form
     {
         $ctaForm = new Form();
-        $ctaForm->addText('name', 'Jméno')->setRequired();
-        $ctaForm->addEmail('email', 'Email')->setRequired();
+        $ctaForm->addText('name', 'Jméno')
+        ->setHtmlAttribute('placeholder', 'Jméno*')
+        ->setRequired();
+        
+        $ctaForm->addEmail('email', 'Email')
+        ->setHtmlAttribute('placeholder', 'Email*')
+        ->setRequired();
+        
         $ctaForm->addText('phone', 'Telefon')
         ->setHtmlType('tel')
-        ->setEmptyValue('+420')
+        ->setHtmlAttribute('placeholder', 'Telefon*')
         ->setRequired();
+        
         $ctaForm->addTextArea('message', 'Zpráva')
-        ->addRule($ctaForm::MAX_LENGTH, 'Poznámka je příliš dlouhá', 500)
-        ->setRequired();
-        $ctaForm->addSubmit('send',  'Poslat')->setHtmlAttribute('class', 'btn btn-primary');
+        ->setHtmlAttribute('placeholder', 'Vaše zpráva...');
+        
+        $ctaForm->addSubmit('send',  'Poslat')
+        ->setHtmlAttribute('class', 'btn btn-primary');
         
         $ctaForm->onSuccess[] = [$this, 'ctaProcess'];
-        
         return $ctaForm;
     }
 
