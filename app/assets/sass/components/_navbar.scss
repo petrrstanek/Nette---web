@@ -4,4 +4,24 @@
     left: 0;
     right: 0;
     z-index: 99;
+
+    a{
+
+        img{
+            width: 90px;
+            position: absolute;
+            top: 0
+        }
+    }
+
+    ul{
+        li{
+            a{
+                color: white;
+                &:hover{
+                    color: $color-primary;
+                }
+            }
+        }
+    }
 }

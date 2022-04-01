@@ -15,6 +15,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     private $slides;
     private $pages;
     private $references;
+    private $navItems;
 
     public function __construct(Nette\Database\Explorer $database)
     {
@@ -26,6 +27,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
         $this->slides = $this->database->table('slides');
         $this->pages = $this->database->table('pages')->order('id DESC');
         $this->references = $this->database->table('references');
+        $this->navItems = $this->database->table('pages')->where('inNav', 1);
     }
 
     public function renderDefault(): void
@@ -33,6 +35,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
         $this->template->slides = $this->slides;
         $this->template->pages = $this->pages;
         $this->template->references = $this->references;
+        $this->template->navItems = $this->navItems;
     }
 
     protected function createComponentCtaForm(): Form

@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
+    <link rel="shortcun icon" href="{$basePath}/../app/assets/img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 	<title>Nette Web</title>
 </head>
@@ -11,17 +12,17 @@
     <main>
         <nav id="navbar-style" class="navbar navbar-expand-md navbar-light bg-light">
             <div class="container">
-                <a href="" class="navbar-brand text-white">Logo</a>
+                <a href="" class="navbar-brand text-white">
+                    <img src="{$basePath}/../app/assets/img/logo_transparent.png" class="">
+                </a>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"></a></li>
+                        <li class="nav-item" n:foreach="$navItems as $navItem">
+                            <a href="#" class="nav-link">{$navItem->title}</a>
+                        </li>
                     </ul>
                 </div>
             </div>
