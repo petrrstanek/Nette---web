@@ -22,7 +22,7 @@
 <section id="pages" class="mt-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 d-flex justify-content-center" n:foreach="$pages as $page">
+            <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center mb-3" n:foreach="$pages as $page">
                 <a n:href="Homepage:detail $page->id" class="card">
                     <div class="card-body">
                         <img src="{$page->img}" alt="">

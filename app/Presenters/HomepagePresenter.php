@@ -26,14 +26,13 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     public function actionDefault(): void 
     {
         $this->slides = $this->database->table('slides');
-        $this->pages = $this->database->table('pages');
+        $this->pages = $this->database->table('pages')->order('id DESC')->limit(6);
         $this->references = $this->database->table('references');
         $this->navItems = $this->database->table('pages')->where('inNav', 1);
     }
 
     public function renderDefault(): void
     {
-        
         $this->template->slides = $this->slides;
         $this->template->pages = $this->pages;
         $this->template->references = $this->references;
