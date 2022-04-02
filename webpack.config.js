@@ -13,7 +13,7 @@ module.exports = {
         web: path.join(ROOT_PATH, "app/assets/entry.js"),
     },
     output: {
-        path: path.join(ROOT_PATH, "web/dist"),
+        path: path.join(ROOT_PATH, "app/assets/dist"),
         publicPath: "/dist/",
         filename: '[name].bundle.js',
         assetModuleFilename: 'images/[name][ext][query]'
