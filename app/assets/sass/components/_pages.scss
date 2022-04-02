@@ -1,6 +1,13 @@
 #pages{
     .container{
-        padding: 0 130px;
+        padding: 0 180px;
+        @include respond(tab-land){
+            padding: 0 130px;
+        }
+
+        @include respond(phone){
+            padding: 0 60px;
+        }
     }
     .col-md-4, .col-lg-6, .col-12{
         a{
@@ -58,7 +65,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, 200%);
+        transform: translate(-50%, 245%);
         transition: 0.3s ease-in;
     }
 }

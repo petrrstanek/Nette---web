@@ -4,11 +4,14 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide" n:foreach="$slides as $slide">
                 <div class="overlay-swiper">
-                    <img src="{$slide->img}">
+                <picture>
+                    <source media="(max-width: 48em)" srcset="{$slide->img_min}">
+                    <img srcset="{$slide->img}">
+                </picture>
                     <div class="swiper-heading">
                         <h1 class="heading-primary">{$slide->title}</h1>
                         <h3 class="heading-tercinary">{$slide->desc}</h3>
-                        <button class="btn btn-primary mt-5" href="#pages">Chci vědět víc</button>
+                        <a class="btn btn-primary mt-5" href="#pages">Chci vědět víc</a>
                     </div>
                 </div>
             </div>
@@ -25,7 +28,7 @@
             <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center mb-3" n:foreach="$pages as $page">
                 <a n:href="Homepage:detail $page->id" class="card">
                     <div class="card-body">
-                        <img src="{$page->img}" alt="">
+                        <img src="{$page->img_min}">
                         <div class="hover-overlay">
                         </div>
                         <svg class="icon icon-search">

@@ -1,7 +1,11 @@
 {block content}
 <section id="detail">
     <header class="header">
-        <img src="{$page->img}" class="img-fluid">
+    <picture>
+    <source media="(max-width: 45em)" srcset="{$page->img_min}">
+        <img srcset="{$page->img}" class="img-fluid">
+
+    </picture>
         <div class="heading-detail">
            <h1 class="heading-primary">
                 {$page->title}

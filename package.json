@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "compile": "node-sass app/assets/sass/main.scss app/assets/sass/css/style.css -w",
-    "build": "cross-env NODE_ENV=development webpack --watch --progress"
+    "build": "cross-env NODE_ENV=development webpack --watch --progress",
+    "minify": "gulp minify"
   },
   "author": "",
   "license": "ISC",
