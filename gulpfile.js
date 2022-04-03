@@ -1,9 +1,9 @@
-const {src, dest, watch, series} = require('gulp');
+const { src, dest, watch, series } = require('gulp');
 
 const terser = require('gulp-terser');
 
-function minifyJS(){
-    return src('web/dist/web.bundle.js') .pipe(terser()).pipe(dest('dist/assets/js'))
+function minifyJS() {
+  return src('app/assets/dist/web.bundle.js').pipe(terser()).pipe(dest('app/assets/dist/js'));
 }
 
-exports.default = series(minifyJS)
+exports.default = series(minifyJS);
