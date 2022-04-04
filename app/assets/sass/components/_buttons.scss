@@ -1,21 +1,23 @@
-.btn.btn-primary{
-    text-transform: uppercase;
-    color: white;
-    background-color: transparent;
-    transition: 0.3s ease;
-    outline: none;
-    &:hover{
-        transform: translateY(-5px);
-    }
-    &:focus{
-        box-shadow: none;
-    }
+.btn.btn-primary {
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  transition: 0.3s ease;
+  outline: none;
+  border-color: $color-primary;
+  &:hover {
+    background-color: $color-primary;
+    transform: translateY(-5px);
+  }
+  &:focus {
+    box-shadow: none;
+  }
 }
 
-#cta{
-    .cta-button{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+#cta {
+  .cta-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

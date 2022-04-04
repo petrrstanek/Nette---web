@@ -1,5 +1,5 @@
 {block content}
-<header id="showcase">
+<header class="showcase">
      <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide" n:foreach="$slides as $slide">
@@ -22,7 +22,7 @@
      </div>
 </header>
 
-<section id="pages" class="mt-5" data-target="#showcase" data-spy="scroll" data-offset="0">
+<section class="pages mt-5" data-target="#showcase" data-spy="scroll" data-offset="0">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center mb-3" n:foreach="$pages as $page">
@@ -32,7 +32,7 @@
                         <div class="hover-overlay">
                         </div>
                         <svg class="icon icon-search">
-                            <use xlink:href="{$basePath}/../app/assets/img/sprite.svg#icon-search"></use>                            
+                            <use xlink:href="{$basePath}/assets/dist/images/sprite.svg#icon-search"></use>                            
                           </svg>
                     </div>
                     <div class="card-footer d-flex justify-content-center align-items-center flex-column text-center" style="padding: 10px 0;">
@@ -45,10 +45,9 @@
     </div>
 </section>
 
-<section id="references" class="mt-5">
+<section class="references mt-5">
     <h1 class="text-center my-5">Hodnocení</h1>
     <div class="container">
-
         <div class="swiper ref-swiper my-5">
             <div class="swiper-wrapper">
                 <div class="swiper-slide text-center" n:foreach="$references as $reference">
@@ -65,12 +64,10 @@
             </div>
             <div class="swiper-pagination mt-2"></div>
         </div>
-
-
     </div>
 </section>
 
-<section id="cta">
+<section class="cta">
 <h3 class="heading-tercinary text-center"> Kontaktuje nás</h3>
     <div class="container d-flex justify-content-center align-items-center h-100">
         <form n:name=ctaForm class=form>

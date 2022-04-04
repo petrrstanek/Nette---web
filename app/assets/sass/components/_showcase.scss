@@ -1,17 +1,16 @@
-#showcase {
-    .mySwiper > .swiper-wrapper{
-        overflow-y: hidden;
-    }
+.showcase {
+  .mySwiper > .swiper-wrapper {
+    overflow-y: hidden;
+  }
 
-    .overlay-swiper::before{
-        content: '';
-        background: rgba(0,0,0, 0.55);
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        z-index: 9;
-    }
+  .overlay-swiper::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+  }
 }
-

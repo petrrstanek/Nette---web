@@ -1,53 +1,53 @@
-
-html{
-    @include respond(phone){
-        font-size: 70%''
-    }
-    @include respond(tab-port){
-        font-size: 80%;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+html {
+  @include respond(phone) {
+    font-size: 70% '';
+  }
+  @include respond(tab-port) {
+    font-size: 80%;
+  }
 }
-body{
-    font-family: 'Open Sans', sans-serif!important;
-}
-
-.heading-primary{
-    text-transform: uppercase;
-    font-family: 'Open Sans';
-    font-size: 3em;
-    color: white;
+body {
+  font-family: 'Open Sans', sans-serif !important;
 }
 
-h5 .heading-seconary{
-    font-family: 'Open Sans';
-    font-size: 1rem;
+.heading-primary {
+  text-transform: uppercase;
+  font-family: 'Open Sans';
+  font-size: 3em;
+  color: white;
 }
 
-.heading-tercinary{
-    font-style: italic;
-    color:white;
+h5 .heading-seconary {
+  font-family: 'Open Sans';
+  font-size: 1rem;
 }
 
-#cta{
-    .heading-tercinary{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 25px;
-    }
+.heading-tercinary {
+  font-style: italic;
+  color: white;
 }
 
-.swiper-heading{
-    text-align: center;
-    z-index: 10;
-    @include absCenter;
+#cta {
+  .heading-tercinary {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25px;
+  }
 }
 
-.heading-detail{
-    @include absCenter;
-    text-align: center;
+.swiper-heading {
+  text-align: center;
+  z-index: 10;
+  @include absCenter;
 }
 
-.perex{
-    font-size: 13px;
+.heading-detail {
+  @include absCenter;
+  text-align: center;
+}
+
+.perex {
+  font-size: 13px;
 }
