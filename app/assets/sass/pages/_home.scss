@@ -1,36 +1,36 @@
-#showcase{
-    height: 500px;
+.showcase {
+  height: 500px;
 }
 
-#references{
-    height: 100%;
+.references {
+  height: 100%;
 }
 
-footer{
-    background-color: $color-primary;
-    .circle{
-        background-color: black;
-        border-radius: 50%;
-        height: 40px;
-        width: 41px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.3s ease;
+footer {
+  background-color: $color-primary;
+  .circle {
+    background-color: black;
+    border-radius: 50%;
+    height: 40px;
+    width: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+  }
+  svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover svg {
+      fill: $color-primary;
     }
-    svg{
-        fill: white;
-        width: 20px;
-        height: 20px;
+    &:hover .circle {
+      transform: translateY(-1px);
     }
-    a{
-        text-decoration: none;
-        color: black;
-        &:hover svg{
-            fill: $color-primary;
-        }
-        &:hover .circle{
-            transform: translateY(-1px);
-        }
-    }
+  }
 }

@@ -1,37 +1,37 @@
-#navbar-style{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
+.navbar-style {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
 
-    .navbar-toggler{
-        color: transparent;
-        border-color: transparent;
+  .navbar-toggler {
+    color: transparent;
+    border-color: transparent;
+  }
+
+  svg {
+    fill: $color-primary;
+    width: 30px;
+    height: 30px;
+  }
+
+  a {
+    img {
+      width: 90px;
+      position: absolute;
+      top: 0;
     }
+  }
 
-    svg{
-        fill: $color-primary;
-        width: 30px;
-        height: 30px;
-    }
-
-    a{
-        img{
-            width: 90px;
-            position: absolute;
-            top: 0
+  ul {
+    li {
+      a {
+        color: white;
+        &:hover {
+          color: $color-primary;
         }
+      }
     }
-
-    ul{
-        li{
-            a{
-                color: white;
-                &:hover{
-                    color: $color-primary;
-                }
-            }
-        }
-    }
+  }
 }

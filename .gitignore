@@ -1,3 +1,6 @@
 node_modules
 vendor
 www/assets
+log
+temp
+bin
