@@ -40,6 +40,11 @@ module.exports = {
           outputPath: 'fonts',
         },
       },
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
     ],
   },
   plugins: [

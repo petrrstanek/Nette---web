@@ -3,4 +3,4 @@ import './js/swiper.js';
 import './js/nette_forms';
 import './js/images';
 
-require('bootstrap');
+require('bootstrap/dist/js/bootstrap');
