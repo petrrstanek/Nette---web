@@ -3,4 +3,4 @@ import './js/swiper.js';
 import './js/nette_forms.js';
 import './js/images.js';
 
-// import { ScrollSpy, Collapse } from 'bootstrap';
+import { ScrollSpy, Collapse } from 'bootstrap';
