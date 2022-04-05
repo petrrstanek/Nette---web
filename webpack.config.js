@@ -2,6 +2,7 @@ const path = require('path');
 const { resolve: resolvePath } = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const devMode = process.env.NODE_ENV !== 'production';
 
 const ROOT_PATH = __dirname;
@@ -12,7 +13,7 @@ module.exports = {
     web: path.join(ROOT_PATH, 'app/assets/entry.js'),
   },
   output: {
-    path: path.join(ROOT_PATH, 'www/assets/dist'),
+    path: path.join(ROOT_PATH, 'www/dist'),
     publicPath: '/dist/',
     filename: '[name].bundle.js',
     assetModuleFilename: 'images/[name][ext][query]',
@@ -39,11 +40,6 @@ module.exports = {
         options: {
           outputPath: 'fonts',
         },
-      },
-      {
-        test: /\.js$/,
-        enforce: 'pre',
-        use: ['source-map-loader'],
       },
     ],
   },
